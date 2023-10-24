@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/main.css',
   ],
+  
   modules: [
  
     '@pinia/nuxt',
@@ -15,6 +16,12 @@ export default defineNuxtConfig({
 
   
   ],
+  app: {
+    head: {
+      htmlAttrs: { lang: 'pt-br' },
+           link: [{ rel: 'icon', type: 'image/jpeg', href: "@/logo.jpeg" }]
+        }
+   },
   runtimeConfig:{
     appwriteApiKey:'',
     databaseKey: '',
@@ -32,11 +39,11 @@ export default defineNuxtConfig({
 
 supabase: {  
   
- redirect:false
-// redirectOptions: {   
-//    login: '/login', 
-//    callback: '/painel',   
-//     exclude: ['/', '/essencias', '/aluminios', '/carvoes', '/rosh', '/pegador', '/acendedor'],  }
+//  redirect:false
+redirectOptions: {   
+   login: '/login', 
+   callback: '/confirm',   
+    exclude: ['/', '/essencias', '/aluminios', '/carvoes', '/rosh', '/pegador', '/acendedor'],  }
 
  }
 })

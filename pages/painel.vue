@@ -157,9 +157,14 @@ setTimeout(async () => {
 }, 400);
 
 }
-definePageMeta({
-  middleware: 'auth'
-})
+async function Out(){
+  const { error } = await supabase.auth.signOut();
+  location.href = '/'
+
+}
+// definePageMeta({
+//   middleware: 'auth'
+// })
 onMounted(() => {});
 </script>
 
@@ -173,7 +178,9 @@ onMounted(() => {});
       >
         Novo
       </button>
-
+      <button class="float-right p-2 rounded-md bg-red-300" @click="Out">
+        Sair do painel
+      </button>
       <Transition>
         <div
           class="w-96 flex flex-col border-2 m-2 bg-slate-50 p-2 rounded-sm relative justify-center items-center"

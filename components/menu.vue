@@ -53,7 +53,8 @@ const store = useCartStore()
                 <Transition>
                     <div v-if="modal"
                         class="flex flex-col h-screen w-44 z-50 right-0 fixed bg-black opacity-80 top-0 gap-8 border-b-2 text-white text-[1.8rem] p-3">
-                        <!-- <XMarkIcon @click="modal = false" class="h-10 cursor-pointer text-white font-bold" /> -->
+                        
+                        <Icon name="ci:close-md"     @click="modal = false" class="h-5 text-red-500 cursor-pointer" />
                         <NuxtLink @click="modal = false"  to="/">Home</NuxtLink>
                         <NuxtLink @click="modal = false" to="/essencias">Essências</NuxtLink>
                         <NuxtLink @click="modal = false" to="/aluminios">Aluminio</NuxtLink>

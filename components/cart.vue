@@ -32,7 +32,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <h1 class="text-white absolute bottom-4 right-3 font-bold">R$ {{ store.allPrices }}</h1>
+    <h1 class="text-white absolute bottom-4 right-4 text-xl font-bold">R$ {{ store.allPrices }}</h1>
     <div class="absolute bottom-2 gap-4 flex justify-center w-full">
       <button class="text-[1.3rem] px-2 bg-yellow-100 rounded-md" @click="store.modalCart = false">
         Continuar

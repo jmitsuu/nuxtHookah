@@ -1,8 +1,9 @@
 <script setup>
 const user = useSupabaseUser()
 watch(user, () => {
+  console.log(user)
   if (user.value) {
-    return navigateTo('/')
+    return navigateTo('/painel')
   }
 }, { immediate: true })
 </script>
