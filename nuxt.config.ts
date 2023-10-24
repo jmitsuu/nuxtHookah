@@ -33,7 +33,10 @@ export default defineNuxtConfig({
 supabase: {  
   
  redirect:false
-
+// redirectOptions: {   
+//    login: '/login', 
+//    callback: '/painel',   
+//     exclude: ['/', '/essencias', '/aluminios', '/carvoes', '/rosh', '/pegador', '/acendedor'],  }
 
  }
 })
